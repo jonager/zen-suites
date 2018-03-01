@@ -1,0 +1,54 @@
+@import 'reset';
+
+.hero{
+    /* The image used */
+    background-image: url("../img/miami-day.jpg");
+
+    /* Set a specific height */
+    min-height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.room{
+    background-image: url("../img/room.jpg");
+
+    /* Set a specific height */
+    height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.room{
+    background-image: url("../img/room.jpg");
+
+    /* Set a specific height */
+    height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.night{
+    background-image: url("../img/miami-night.jpeg");
+
+    /* Set a specific height */
+    height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
