@@ -9,17 +9,74 @@
     background-size: cover;
 }
 
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "hero"
+        "room"
+        "night";
+}
+
 .hero{
     background-image: url("../img/miami-day.jpg");
     @extend %background-img-common;
+    grid-area: hero;
+
+    .nav-cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "logo . navi";
+
+        padding: 10px 100px;
+        border-bottom: 2px solid #C6BC98;
+        background-color: rgba(0,0,0,0.15);
+        position: fixed;
+        width: 100%;
+
+        .logo{
+            grid-area: logo;
+        }
+
+        .main-nav{
+            a{
+                display: inline-block;
+                margin-right: 90px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 1.5em;
+                letter-spacing: 1px;
+
+            
+            }
+            a:hover{
+                color: black;
+                opacity: 0.7;
+            }
+            grid-area: navi;
+            justify-self: start;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+
 }
 
 .room{
     background-image: url("../img/room.jpg");
     @extend %background-img-common;
+    grid-area: room;
 }
 
 .night{
     background-image: url("../img/miami-night.jpeg");
     @extend %background-img-common;
+    grid-area: night;
 }
