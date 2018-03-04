@@ -1,8 +1,7 @@
 @import 'reset';
 
 %background-img-common{
-    min-height: 700px; 
-
+    opacity: .9;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,12 +14,15 @@ body{
     grid-template-rows: auto;
     grid-template-areas: 
         "hero"
+        "info1"
         "room"
+        "info2"
         "night";
 }
 
 .hero{
     background-image: url("../img/miami-day.jpg");
+    min-height: 100%; 
     @extend %background-img-common;
     grid-area: hero;
 
@@ -32,14 +34,25 @@ body{
             "logo . navi";
 
         padding: 10px 100px;
-        border-bottom: 2px solid #C6BC98;
-        background-color: rgba(0,0,0,0.15);
-        position: fixed;
-        width: 100%;
+        border-bottom: 3px solid #C6BC98;
+        background-color: rgba(0,0,0,0.35);
+        // position: fixed;
+        // width: 100%;
 
         .logo{
             grid-area: logo;
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 2em;
+                padding-left: 10px;
+                font-weight: bold;
+                color: white;
+            }
         }
+        
+
+        
 
         .main-nav{
             a{
@@ -50,8 +63,6 @@ body{
                 font-weight: bold;
                 font-size: 1.5em;
                 letter-spacing: 1px;
-
-            
             }
             a:hover{
                 color: black;
@@ -62,21 +73,103 @@ body{
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+        }
+    }
+
+    .hero-cont{
+        text-align: center;
+        padding: 0 300px;
+        padding-top: 300px;
+    
+
+        h1{
+            color: white;
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        p{
+            color: white;
+            font-size: 1.5em;
+            margin-bottom: 200px;
+        }
+        a{
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            opacity: 0.95;
+            display: inline-block;
+            border-radius: 2.5px;
+            background:rgb(230, 28, 38);
+            font-weight: 600;   
+            padding: 15px 40px;
+            margin-bottom: 250px; 
+        }
+        a:hover{
+            color: rgb(230, 28, 38);
+            background: white;
+            opacity: 1;
         }
     }
 
 
 }
 
+.info1{
+    // grid-area: info1;
+    background-color: #f1efef;
+    padding: 70px 250px;
+    height: 200px;
+    text-align: center;
+    h2{
+        font-size: 2.5em;
+        color: rgb(45, 133, 42);
+        font-weight: bold;
+        letter-spacing: 0.05em;
+
+        margin-bottom: 25px;
+
+    }
+
+    p{
+        line-height: 1.2;
+        font-size: 1.25em;
+    }
+
+}
+
 .room{
-    background-image: url("../img/room.jpg");
-    @extend %background-img-common;
     grid-area: room;
+    background-image: url("../img/room.jpg");
+    height: 700px;
+    @extend %background-img-common;
+}
+
+.info2{
+    grid-area: info2;
+    background-color: #f1efef;
+    padding: 70px 250px;
+    height: 200px;
+    text-align: center;
+    h2{
+        font-size: 2.5em;
+        color: rgb(45, 133, 42);
+        font-weight: bold;
+        letter-spacing: 0.05em;
+
+        margin-bottom: 25px;
+
+    }
+
+    p{
+        line-height: 1.2;
+        font-size: 1.25em;
+    }
 }
 
 .night{
-    background-image: url("../img/miami-night.jpeg");
-    @extend %background-img-common;
     grid-area: night;
+    background-image: url("../img/miami-night.jpeg");
+    height: 700px;
+    @extend %background-img-common;
 }
