@@ -17,7 +17,8 @@ body{
         "info1"
         "room"
         "info2"
-        "night";
+        "night"
+        "footer";
 }
 
 .hero{
@@ -44,7 +45,7 @@ body{
             display: flex;
             align-items: center;
             span{
-                font-size: 2em;
+                font-size: 3em;
                 padding-left: 10px;
                 font-weight: bold;
                 color: white;
@@ -172,4 +173,16 @@ body{
     background-image: url("../img/miami-night.jpeg");
     height: 700px;
     @extend %background-img-common;
+}
+
+footer{
+    height: 300px;
+    background-color: rgb(102, 15, 102);
+    h4{
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        padding-top: 125px;
+
+    }
 }

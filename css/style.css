@@ -55,7 +55,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "hero" "info1" "room" "info2" "night"; }
+  grid-template-areas: "hero" "info1" "room" "info2" "night" "footer"; }
 
 .hero {
   background-image: url("../img/miami-day.jpg");
@@ -74,7 +74,7 @@ body {
       display: flex;
       align-items: center; }
       .hero .nav-cont .logo span {
-        font-size: 2em;
+        font-size: 3em;
         padding-left: 10px;
         font-weight: bold;
         color: white; }
@@ -163,3 +163,12 @@ body {
   grid-area: night;
   background-image: url("../img/miami-night.jpeg");
   height: 700px; }
+
+footer {
+  height: 300px;
+  background-color: #660f66; }
+  footer h4 {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    padding-top: 125px; }
